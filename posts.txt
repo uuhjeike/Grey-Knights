@@ -110,6 +110,117 @@ And then keep it disconnected except during your monthly backup.
 
 That's much safer than spending ৳5–6k on a questionable "6 TB" drive.
 -
+Ah, ৳5,000–৳6,000 changes the recommendation completely. You don't need to buy a 6 TB drive right now.
+
+For your goal, I would rather buy a smaller, healthy HDD and build the system gradually than buy a suspiciously cheap high-capacity used drive.
+
+What you can realistically get
+
+Current Bangladesh listings show roughly:
+
+1 TB HDD: around ৳4,000–৳5,000 for some models. 
+
+2 TB HDD: around ৳6,000–৳6,500 for some options. 
+
+4 TB: generally around ৳11,000–৳13,500+. 
+
+6 TB: generally far above your budget; listings start around ৳11,800 and many are considerably more. 
+
+
+So with ৳5,000–৳6,000, my choice would be:
+
+🥇 Buy a 2 TB HDD
+
+If you can find a healthy 2 TB HDD around ৳5,500–৳6,000, that's much better for you than trying to squeeze a 6 TB drive into the budget.
+
+For example, a Toshiba 2 TB SATA is listed around ৳5,600 by one Bangladesh retailer. 
+
+Then your system becomes:
+
+YOUR COMPUTER
+                       │
+                       ▼
+                 Existing HDD
+                       │
+                 Important data
+                       │
+                  MONTHLY
+                   BACKUP
+                       ▼
+                ┌─────────────┐
+                │  2 TB HDD   │
+                │   ৳5–6k     │
+                └─────────────┘
+                       │
+                 DISCONNECT
+                       ▼
+                  SAFE STORAGE
+
+But there's one big limitation
+
+You said your eventual data collection is 5 TB.
+
+A 2 TB backup obviously cannot back up all 5 TB.
+
+So don't try to solve the entire 5 TB problem today.
+
+Instead:
+
+Step 1 — ৳5–6k:
+Buy a good 2 TB HDD → start backing up your most important 2 TB.
+
+Step 2 — later:
+Buy another 2 TB/4 TB drive.
+
+Step 3 — eventually:
+Reach 6–8 TB total backup capacity.
+
+
+---
+
+💡 An even smarter strategy for you
+
+Since you specifically want family photos/videos and long-term preservation, don't treat everything as equally important.
+
+For example:
+
+5 TB TOTAL DATA
+
+Family photos/videos       1.5 TB  ⭐⭐⭐⭐⭐
+Important documents         100 GB  ⭐⭐⭐⭐⭐
+Personal projects           500 GB  ⭐⭐⭐⭐
+Movies/games/downloads       3 TB  ⭐
+
+Your first ৳5–6k HDD should protect the 1.5 TB of irreplaceable family material first.
+
+Movies, games and things you can download again don't deserve the same backup priority.
+
+And don't buy this just because it's cheap
+
+If someone offers:
+
+> "6 TB HDD — ৳5,000!"
+
+
+
+I'd be extremely careful.
+
+At your budget, a tested 1–2 TB drive is much more believable than a genuine, healthy new 6 TB drive. Current Bangladesh listings put even 6 TB drives substantially higher. 
+
+If buying used, test the SMART health and surface before trusting it with your family archive.
+
+My recommendation for your ৳5,000–৳6,000
+
+Best: 🥇 2 TB SATA HDD, preferably new/warranty
+
+Acceptable: 🥈 Used 2 TB HDD with excellent SMART + full surface test
+
+If 2 TB isn't available: 🥉 1 TB new HDD
+
+And then keep it disconnected except during your monthly backup.
+
+That's much safer than spending ৳5–6k on a questionable "6 TB" drive.
+-
 Yes. I checked current Bangladesh listings, and for your specific use—5 TB family/archive data, long-term storage, monthly backup, no cloud—I would not simply buy the cheapest 6 TB HDD.
 
 Current 6 TB prices I found
