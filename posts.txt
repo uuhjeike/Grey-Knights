@@ -1,4 +1,256 @@
 -
+Yes. If your priority is the cheapest possible server in Bangladesh, and you don't care about size, weight, appearance, or performance, I would not buy a modern NAS or branded server. A used desktop + cheap HDDs is usually much better value.
+
+Current Bangladesh listings support that approach: older PCs can be around ৳5,000–৳14,500, while a new 1TB HDD can start around ৳4,300; new 2TB HDDs are around ৳5,900+ depending on model. 
+
+My ranking for you
+
+Option	Approx. starting cost	Storage potential	Power	My verdict
+
+🥇 Used office PC + HDDs	৳8k–15k	⭐⭐⭐⭐⭐	Medium	Best overall
+🥈 Old desktop/tower + many HDDs	৳5k–12k	⭐⭐⭐⭐⭐	Higher	Cheapest per TB
+🥉 Old laptop + external/internal drives	৳5k–12k	⭐⭐⭐	Low	Cheap but expansion limited
+Raspberry Pi + USB HDD	~৳8k+ before storage	⭐⭐⭐	Very low	Good but not cheapest
+Used enterprise server	৳15k+	⭐⭐⭐⭐⭐	Very high	Usually unnecessary
+Dedicated NAS	৳20k+	⭐⭐⭐⭐⭐	Low/medium	Too expensive for your goal
+
+
+🥇 What I would build
+
+Used Core i5 3rd/4th-gen desktop + several used SATA HDDs.
+
+For example:
+
+Server
+
+Core i5 3rd/4th generation
+
+8GB RAM
+
+120GB SSD → operating system
+
+2–4 SATA HDDs → actual storage
+
+Gigabit Ethernet
+
+No monitor after setup
+
+No keyboard/mouse after setup
+
+
+You don't need a powerful CPU for a file server.
+
+A current Bangladesh desktop listing shows an i3 3rd-gen + 2TB HDD system around ৳7,200, while i5 4th-gen systems with SSD are around ৳14,200. 
+
+That means you can potentially buy an old complete PC very cheaply, then spend the majority of your budget on storage.
+
+The really interesting part: don't buy new HDDs
+
+For your particular goal, I'd investigate:
+
+Used 500GB / 1TB / 2TB SATA HDDs
+
+rather than buying new NAS/server drives.
+
+New server HDDs are extremely expensive in Bangladesh—for example, Star Tech currently lists a 1TB HPE server SATA drive at ৳15,000, while ordinary consumer HDDs are dramatically cheaper. 
+
+You don't need an enterprise HDD just because the computer is acting as a server.
+
+
+---
+
+💰 The ultra-cheap configuration
+
+If you can find something like:
+
+Old PC
+
+> ৳5,000–8,000
+
+
+
+Used 1TB HDD × 2
+
+> roughly whatever the local used market offers
+
+
+
+Small SSD
+
+> operating system
+
+
+
+You could have:
+
+2TB+ server for surprisingly little money.
+
+And later:
+
+> HDD → HDD → HDD → HDD → HDD → HDD
+
+
+
+You can keep expanding as long as the motherboard/PCIe/SATA configuration allows it.
+
+If the case doesn't have enough drive bays, don't care about appearance. You can eventually use a cheap large case or a simple drive enclosure/rack.
+
+
+---
+
+🧠 Even better: build a "storage monster"
+
+Since you specifically said you don't care about size, I'd actually recommend something different from a normal NAS.
+
+Get an old large ATX tower.
+
+Then use:
+
+1× SSD → OS
+
+4–8× SATA HDD → storage
+
+You can even add a cheap PCIe SATA expansion card if the motherboard doesn't have enough SATA ports.
+
+For example:
+
+OLD PC
+        ┌───────────────┐
+        │ Core i5       │
+        │ 8GB RAM       │
+        │ 120GB SSD     │
+        │               │
+        │ SATA #1 ─ HDD │
+        │ SATA #2 ─ HDD │
+        │ SATA #3 ─ HDD │
+        │ SATA #4 ─ HDD │
+        │               │
+        │ PCIe SATA     │
+        │ controller    │
+        └───────┬───────┘
+                │
+       ┌────────┴─────────┐
+       │ HDD HDD HDD HDD  │
+       └──────────────────┘
+
+That's essentially your own cheap home storage server.
+
+
+---
+
+🔥 And there's another option you should seriously consider
+
+Old office PCs from corporate upgrades.
+
+Look for:
+
+Dell OptiPlex
+
+HP EliteDesk
+
+Lenovo ThinkCentre
+
+older custom ATX desktops
+
+
+You don't need a gaming PC.
+
+Something like an old i5 + 8GB RAM + SATA is more than enough for:
+
+file server
+
+personal cloud
+
+website hosting
+
+Git server
+
+media server
+
+backup server
+
+offline Wikipedia
+
+offline documents
+
+photo archive
+
+local AI files
+
+network storage
+
+
+Your CPU isn't the limiting factor—storage and network connectivity are.
+
+
+---
+
+📍 Where I'd look in Dhaka
+
+The New Elephant Road / Multiplan / IDB area is particularly useful because there are many used-computer sellers.
+
+For example:
+
+ABFA COMPUTER AND GADGETS is a used-computer shop on New Elephant Road.
+
+BD Tech Gallery is another used-computer option around Suvastu Arcade/New Elephant Road.
+
+Laptop Tools BD | Used Laptop Shop - Cheap & Original is also in the New Elephant Road area.
+
+For comparison with new parts, RYANS - IDB Bhaban is at IDB/BCS Computer City.
+
+
+---
+
+⚠️ One important thing
+
+For your long-term archival project, I would not make one giant RAID array and assume your data is safe.
+
+For example:
+
+8 × 2TB HDD = 16TB
+
+does not mean you have a safe 16TB archive.
+
+I'd rather do something like:
+
+SERVER
+│
+├── HDD 1 → Main data
+├── HDD 2 → Main data
+├── HDD 3 → Backup
+├── HDD 4 → Backup
+├── HDD 5 → Archive
+└── HDD 6 → Archive
+
+And keep the most important files on at least two physically separate drives.
+
+For your particular "I never want to lose my photos/data" goal, that's much more important than buying an expensive enterprise server.
+
+My ideal cheap build for you
+
+৳10k–15k computer
+
+
+as many tested used SATA HDDs as you can afford
+
+
+120/240GB SSD for OS
+
+
+Gigabit Ethernet
+
+
+Linux/OpenMediaVault/TrueNAS
+
+=
+
+🖥️ Cheap expandable home server
+
+And because you don't care about physical size, I'd choose a large old ATX tower rather than a tiny mini-PC. It gives you dramatically more room for cheap HDD expansion.
+
+If you tell me your maximum budget (e.g. ৳5k, ৳10k, ৳15k, ৳20k, ৳30k), I can work out a Bangladesh-specific server build with the maximum TB per taka, including which old PC generation and which HDD sizes make the most sense.
+-
 https://github.com/uuhjeike/Grey-Knights/blob/main/Post/Screenshot_20261007_213709_b864ea0b534de5941fd13c5c04397e2b.jpg
 -
 https://github.com/uuhjeike/Grey-Knights/blob/main/Post/d3820faf24f8bc2ba979135084b3932b.jpg
