@@ -1,4 +1,120 @@
 -
+Yes — and your idea is actually much better than continuously keeping both HDDs connected.
+
+If by “pressure” you mean wear from repeatedly cloning/copying 5 TB, you can reduce it substantially.
+
+The key point
+
+You do not need to clone the entire 5 TB every month.
+
+Instead, use an incremental backup:
+
+MAIN HDD
+5 TB
+│
+├── January → Backup HDD
+│
+├── February → Only NEW/CHANGED files
+│
+├── March → Only NEW/CHANGED files
+│
+└── April → Only NEW/CHANGED files
+
+So if you have 5 TB but only changed 20 GB during the month, the backup process can copy roughly 20 GB, not 5 TB again.
+
+Even better: don't use a literal clone
+
+A clone normally tries to make the second drive an exact replica of the first.
+
+For your situation, I'd use a backup/synchronization program instead.
+
+For example:
+
+FreeFileSync — excellent for Windows
+
+Robocopy — already included with Windows
+
+rsync — excellent if you eventually use Linux
+
+
+You can configure it so that:
+
+New file       → COPY
+Modified file  → UPDATE
+Deleted file   → DON'T automatically delete backup
+Unchanged file → DO NOTHING
+
+That last option is particularly important for valuable data.
+
+Your monthly system could be extremely simple
+
+NORMAL DAYS
+                   
+Computer ─────── Main HDD
+                    │
+                    │
+              Backup HDD
+              DISCONNECTED
+
+Once a month:
+
+1. Connect Backup HDD
+          ↓
+2. Run incremental backup
+          ↓
+3. Verify backup
+          ↓
+4. Safely eject
+          ↓
+5. Disconnect HDD
+          ↓
+6. Store it safely
+
+What about HDD wear?
+
+The HDD doesn't suffer significant "pressure" simply because you're copying data. The main mechanical activity is spinning and seeking.
+
+And there's an important advantage here:
+
+One monthly 20–100 GB incremental backup is dramatically less work than rewriting 5 TB every month.
+
+You also don't need to worry about minimizing every single HDD operation. Modern HDDs are designed for substantial read/write workloads.
+
+One thing I would change in your plan
+
+Don't make the backup automatically mirror deletions.
+
+Imagine you accidentally delete:
+
+Photos/2018/
+
+from your main HDD.
+
+If your backup is configured as a strict mirror, it may delete the same folder from your backup.
+
+Instead, I'd make your backup behave more like:
+
+> "Keep my previous backup files unless I deliberately remove them."
+
+
+
+That gives you protection against accidental deletion.
+
+
+---
+
+🟢 So your current plan can be:
+
+HDD #1: connected to computer → working data
+
+HDD #2: normally disconnected → monthly backup
+
+Every month: connect → incremental backup → verify → disconnect.
+
+That's a very good low-cost starting system for your 5 TB.
+
+Later, when you can afford it, add a third HDD and keep it somewhere physically separate. That would be the major next improvement.
+-
 Absolutely. Let me make it very simple and practical, specifically for your goal:
 
 > Store about 5 TB of important data, spend as little as possible, no cloud subscription, and make the data as safe as reasonably possible.
