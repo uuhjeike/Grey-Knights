@@ -1,4 +1,132 @@
 -
+Yes, I understand what you mean now. You're worried that copying several terabytes in one operation makes both HDDs work very hard, and you want the safest way to do it.
+
+The important thing is: an HDD does not get damaged simply because you copy a large amount of data at once. During a large copy, the main HDD is mostly reading and the backup HDD is mostly writing. A long, continuous sequential copy is actually a fairly normal workload for a hard drive.
+
+The best approach for your 2-HDD system
+
+Use this pattern:
+
+HDD 1 = Main storage
+       │
+       │ Monthly backup
+       ▼
+HDD 2 = Backup storage
+       │
+       └── Normally disconnected
+
+For the first backup, you have no choice: you need to copy your existing 5 TB once.
+
+After that, never copy all 5 TB again unless necessary.
+
+First backup:
+5 TB → 5 TB
+
+Next month:
+5 TB existing
++ 50 GB changed/new
+       ↓
+Only ~50 GB copied
+
+Next month:
++ 20 GB changed/new
+       ↓
+Only ~20 GB copied
+
+That is much easier on the drives than repeatedly cloning the whole disk.
+
+Should you slow down the copy?
+
+You can, but I generally wouldn't deliberately make a 10-hour copy take 30 hours just to reduce "pressure."
+
+A better method is:
+
+Let the HDD perform a normal sequential copy at its comfortable speed, but keep it cool and stable.
+
+For example:
+
+GOOD
+████████████████████
+steady sequential copy
+good airflow
+stable electricity
+few interruptions
+
+rather than:
+
+NOT IDEAL
+copy 10 minutes
+stop
+copy 5 minutes
+stop
+restart
+stop
+restart
+
+Constantly starting and stopping isn't necessarily better for a mechanical HDD.
+
+For your first 5 TB backup
+
+I'd do this:
+
+1. Connect both HDDs.
+
+2. Start one large backup job.
+
+3. Let it run while you're sleeping or not using the computer heavily.
+
+4. Make sure the computer and HDDs have good airflow.
+
+5. Don't move or shake the external HDD while it's operating.
+
+6. After the backup finishes, verify the important files.
+
+7. Safely eject HDD #2 and disconnect it.
+
+That's it.
+
+What actually matters more for HDD health
+
+I'd worry much more about these than the fact that you're copying 5 TB:
+
+Heat → keep the drive properly ventilated.
+
+Physical shock/vibration → don't move a spinning HDD.
+
+Sudden power loss → a UPS is useful.
+
+Bad/old HDD condition → check SMART health.
+
+Constant random activity → avoid unnecessary programs constantly accessing the drive.
+
+One very useful improvement
+
+For your monthly backup, use incremental backup or synchronization, not "full clone."
+
+So your HDD #2 doesn't need to be tortured with another 5 TB transfer every month.
+
+MONTH 1
+Main HDD ───────────► Backup HDD
+       5 TB
+
+MONTH 2
+Main HDD ───────────► Backup HDD
+       only changed files
+
+MONTH 3
+Main HDD ───────────► Backup HDD
+       only changed files
+
+MONTH 4
+Main HDD ───────────► Backup HDD
+       only changed files
+
+This is the setup I'd choose for you.
+
+One important correction: the backup drive isn't "under pressure" in a dangerous sense during a big copy. A healthy HDD is designed to perform sustained reading/writing. The goal isn't to make the drive do as little work as physically possible; it's to avoid unnecessary work, heat, shocks, and repeated full-disk copies.
+
+For your 5 TB collection, one initial full backup + monthly incremental backups + HDD #2 disconnected when not backing up is an excellent low-cost solution.
+-
 Yes — and your idea is actually much better than continuously keeping both HDDs connected.
 
 If by “pressure” you mean wear from repeatedly cloning/copying 5 TB, you can reduce it substantially.
