@@ -1,4 +1,45 @@
 -
+Got it — the 1 TB is ONLY for games. You want the largest possible collection of small-size console games, plus some lightweight modern games.
+
+A realistic target would be:
+
+🕹️ Atari/Arcade/early 8-bit: 5,000–15,000 games
+
+🎮 NES: 1,000+
+
+🎮 SNES: 1,000+
+
+🎮 Genesis/Mega Drive: 1,000+
+
+🟩 Game Boy/GBC: 1,500+
+
+🟦 GBA: 1,500+
+
+🟪 N64: 300–400
+
+🎮 Nintendo DS: 1,500–2,000
+
+🟧 PS1: 1,500–2,000
+
+🕹️ Other small retro systems: several thousand
+
+💻 Lightweight modern PC games: 100–300+
+
+
+Total
+
+With 1 TB, you could realistically build a collection of around 20,000–40,000+ games if you prioritize small ROM/cartridge-based games and don't store duplicate regional versions.
+
+If you want literally every game ever released, though, 1 TB isn't enough—especially once you include PS2, GameCube, Wii, Xbox, modern PC, etc. Those disc-based libraries can require many terabytes.
+
+So for your goal:
+
+> 1 TB → ~20,000–40,000+ carefully selected small console/retro games + a selection of lightweight modern games.
+
+
+
+And I would not waste storage on duplicate versions of the same game (USA/Japan/Europe), hacks, prototypes, demos, or multiple revisions. That can save hundreds of GB.
+-
 Yes. Now I understand exactly what you are building: a post-internet-apocalypse offline knowledge computer—maximum useful knowledge, but deliberately avoiding huge amounts of celebrity/sports/entertainment trivia.
 
 I would not download the entire Wikipedia. NOMAD says full English Wikipedia with images is ~125 GB, while Kiwix offers a much smaller nopic version containing the full articles without images. 
