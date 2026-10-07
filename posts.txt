@@ -1,4 +1,59 @@
 -
+Your site is a profile page that builds itself from a plain text file, `posts.txt`. You write posts in that file and the page turns them into a feed.
+
+## The three files
+
+- **`index.html`** is the structure: the profile photo, the name "Grey Knight", the "Ordo Malleus / Daemon Hunters" line, the Share button, an empty feed area and a hidden fullscreen image viewer. It also holds the small sigil icons, drawn as vector shapes.
+- **`style.css`** is the look: the dark theme, the arch frame around the photo, the smoke and ember background, and the layout for phones.
+- **`script.js`** is the brain. It reads `posts.txt` and builds every post on the page.
+
+## How a post becomes a card
+
+1. When the page opens, the script loads `./posts.txt`.
+2. It splits that file into posts. A line with only `-` marks the end of one post.
+3. Inside each post, it looks at every line:
+   - A line like `2026-10-07` or `2026-10-07 18:30` becomes the post date.
+   - A line with only links becomes media.
+   - Anything else is normal text.
+4. Lines starting with `//` and anything inside `/* ... */` are ignored, so you can leave notes for yourself.
+
+Here is an example of what you'd write in `posts.txt`:
+
+```
+2026-10-07 18:30
+Today's transmission.
+https://github.com/uuhjeike/Grey-Knights/blob/main/photo.png
+-
+Another post here.
+```
+
+## How links are understood
+
+The script checks each link and decides what it is:
+
+- **YouTube:** normal videos, Shorts and `youtu.be` links become an embedded player. It also keeps a start time such as `?t=30`.
+- **GitHub links:** a `github.com/.../blob/...` link is quietly converted to its raw file address, so the image or video actually loads.
+- **File type:**
+  - Images (jpg, png, webp, gif and so on) show as pictures. Several images in a row become a gallery.
+  - Videos (mp4, webm and so on) get a video player.
+  - Audio (mp3, wav and so on) gets a custom player.
+  - Files like pdf, zip and txt appear as a download card. Text-type files can show a preview.
+  - Any other link is shown as a plain link.
+
+## The extras
+
+- **Loading in batches:** it shows 10 posts at a time (`BATCH_SIZE`) and loads more as you scroll, so a long feed stays fast.
+- **Image viewer:** tapping an image opens it fullscreen, with Next, Previous and Close buttons.
+- **Share profile:** this uses your phone's share sheet. If that isn't available, it copies the link and shows a small "toast" message.
+- **Counters:** "Transmissions" and "Media" show how many posts and media items you have.
+- **Safety nets:** if the profile photo or any media fails to load, it shows a fallback (the sigil or a "Media unavailable" message) instead of breaking.
+
+## Where the photo comes from
+
+The profile photo link is set at the top of `script.js`, in `PROFILE_PHOTO`. To change it, replace that link.
+
+One thing to know: `posts.txt` isn't in the files you sent me. The site needs it in the same folder as `index.html`, otherwise the feed will show an error state instead of posts.
+-
 https://github.com/uuhjeike/Grey-Knights/blob/main/Post/bc282dbdb9ba32ed57c34942c88f6d3e.jpg
 -
 https://github.com/uuhjeike/Grey-Knights/blob/main/Post/528c8273cf447e80e05eacec66d50f09.jpg
