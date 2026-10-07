@@ -1,4 +1,87 @@
 -
+Ah, yes — you are talking about a much smaller, curated NOMAD library, not downloading the entire Wikimedia/Wikipedia archive.
+
+There is an important distinction:
+
+Wikipedia's raw historical database can indeed reach tens of terabytes. For example, the 2025 English-Wikipedia full revision history was about 31 TB uncompressed. That includes old revisions, talk pages, metadata, etc. You absolutely do not need this for NOMAD. 
+
+A usable offline copy of current Wikipedia is dramatically smaller. NOMAD currently describes its complete English Wikipedia with pictures as about 125 GB. 
+
+And NOMAD lets you choose Essential / Standard / Comprehensive content rather than downloading everything. 
+
+
+What I think you actually want
+
+You could build a “survival + science + useful knowledge” NOMAD containing:
+
+Keep
+
+🔬 Science — physics, chemistry, biology, astronomy
+
+🧬 Human biology/anatomy
+
+🏥 Medical first aid and general medical references
+
+🌾 Agriculture, farming, crops, soil, irrigation
+
+🔧 Repair/how-to information
+
+⚡ Electricity/electronics basics
+
+💻 Computer/programming knowledge
+
+🧰 Engineering/technical references
+
+🍳 Food preservation/cooking
+
+🏕️ Survival skills
+
+🌍 Geography and useful maps
+
+📚 Educational material / Khan Academy
+
+📖 Useful books/manuals
+
+🤖 Optional local AI
+
+
+Skip
+
+❌ Celebrity biographies
+
+❌ Sports statistics
+
+❌ Entertainment
+
+❌ TV/movie information
+
+❌ Huge collections of historical revisions
+
+❌ Every Wikipedia image
+
+❌ Random biographies and trivial articles
+
+
+NOMAD itself already supports this type of selective setup, including medical, survival, repair, education and curated collections. 
+
+💾 How much would I target?
+
+For your specific idea, I'd aim for approximately:
+
+100–200 GB → excellent curated knowledge library
+
+250–500 GB → extremely comprehensive
+
+1 TB → basically "download everything useful I might ever need" territory, while still leaving room for additional material.
+
+And importantly, you don't need a 100-TB drive.
+
+Also, NOMAD's creator says their own very comprehensive installation—including survival, medicine, agriculture, cooking, complete Wikipedia, global street maps, Khan Academy and AI—fits on 1 TB with roughly 500 GB remaining. 
+
+So if your goal is “humanity's useful knowledge, but remove the unnecessary stuff”, I'd actually build you a ~200–300 GB curated library rather than downloading the 125-GB Wikipedia-with-images package plus tons of unnecessary material.
+
+If you want, I can .make you a **precise NOMAD content list**—category by category—with an estimated GB size, specifically optimized for **science + medical + agriculture + engineering + survival + education**, while aggressively removing useless content
+-
 Yes. If your goal is “download absolutely everything Project NOMAD can offer”, not just the basic library, I would plan for 1 TB minimum, and 2 TB if you want comfortable headroom.
 
 The current official NOMAD information says:
