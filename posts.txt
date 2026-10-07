@@ -1,4 +1,70 @@
 -
+If you mean what else you can add to your offline NOMAD system beyond the 2 AIs, world map, science, survival, medicine, agriculture, and entertainment, there is a lot.
+
+Best additions
+
+🧪 Science: physics, chemistry, biology, astronomy, geology
+
+🔧 Engineering: electronics, mechanics, electrical, civil basics
+
+💻 Programming: HTML, CSS, JavaScript, Python, Linux, Git, databases
+
+🩺 Health: first aid, emergency procedures, anatomy, basic medical references
+
+🌾 Agriculture: crops, seeds, soil, irrigation, livestock, pest management
+
+🏠 DIY/repair: electrical repair, plumbing, construction, tools, appliance repair
+
+⚡ Energy: solar power, batteries, generators, basic power systems
+
+🥫 Food: cooking, food preservation, fermentation, nutrition
+
+🏕️ Survival: water purification, shelter, navigation, fire, emergency preparedness
+
+🗺️ Geography: world maps, country information, coordinates, offline navigation
+
+📚 Education: mathematics, languages, textbooks, encyclopedias, courses
+
+🗣️ Languages: offline dictionaries, translation databases, grammar references
+
+📖 Books: public-domain technical/science literature and manuals
+
+🛰️ Space: NASA/public-domain astronomy and space references
+
+🌦️ Weather knowledge: meteorology and disaster-preparedness references
+
+🧭 Navigation: offline maps + compass/GPS concepts + coordinate systems
+
+🧰 Reference manuals: machine manuals, repair guides, technical diagrams
+
+🎨 Creative tools: offline image/audio/video editing software and documentation
+
+🎮 Entertainment: movies, music, games, comics, ebooks—whatever you legally own/download
+
+🧠 Local AI knowledge base: let your AI search and answer from all of the above
+
+
+The really powerful part
+
+You could organize it as:
+
+NOMAD → 🧠 Coding AI
+→ 🏕️ Survival AI
+→ 🔬 Science
+→ 🩺 Medicine
+→ 🌾 Agriculture
+→ 🔧 Engineering & Repair
+→ 💻 Programming Library
+→ 🌍 World Maps
+→ 📚 Education
+→ 🗣️ Languages
+→ 📖 Books
+→ 🎬 Entertainment
+
+That would turn a 500 GB–1 TB computer into a genuinely useful offline knowledge station, rather than simply an offline copy of Wikipedia.
+
+And for your use case, I would avoid downloading every Wikipedia article/image. Curating the useful material gives you far more value per GB.
+-
 Yes — for that setup, you do not need huge AI storage.
 
 Your offline AI setup
