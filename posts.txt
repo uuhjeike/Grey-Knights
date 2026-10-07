@@ -1,4 +1,33 @@
 -
+Yes — for that setup, you do not need huge AI storage.
+
+Your offline AI setup
+
+Purpose	Recommended AI	Approx. storage
+
+💻 Coding — HTML/CSS/JavaScript	Strong 7B–14B coding model	~5–18 GB
+🏕️ Survival — medicine, agriculture, emergencies, practical knowledge	Strong 7B–14B general model	~5–18 GB
+🎬 Entertainment	Small local model / your media	~5–20 GB
+📚 HTML/CSS/JS documentation	Offline docs	~1–10 GB
+
+
+Total AI + documentation: roughly 20–50 GB.
+
+For the coding AI, I'd prioritize a model specifically trained for programming rather than simply using a general AI. It can work offline with your downloaded HTML/CSS/JavaScript documentation.
+
+So if you combine this with your earlier plan:
+
+🌍 World map ~125 GB
+📚 Curated science/medical/agriculture/survival knowledge ~100–200 GB
+🤖 Two AI models ~10–35 GB
+💻 OS/software ~30–50 GB
+🎬 Entertainment ~20–50 GB
+
+➡️ A 500 GB drive is workable.
+➡️ 1 TB is the comfortable choice.
+
+If you tell me your PC's CPU + RAM + GPU (if any), I can pick the exact two AI models that will run well offline.
+-
 If you mean the entire world offline map in Project NOMAD, it's currently about 120–126 GB for the full-featured global map. 
 
 So roughly:
