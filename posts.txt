@@ -1,4 +1,150 @@
 -
+Yes. If your goal is 5 TB of important data, maximum practical security, low cost, and absolutely no cloud subscription, I would not build an expensive NAS first.
+
+My recommended setup
+
+Use 3 HDDs, but only one needs to be online.
+
+YOUR 5 TB DATA
+                       │
+              ┌────────┴────────┐
+              │                 │
+        HDD #1 — 6 TB      HDD #2 — 6 TB
+        MAIN STORAGE       BACKUP COPY
+              │                 │
+              └────────┬────────┘
+                       │
+                 HDD #3 — 8 TB
+                 OFFLINE ARCHIVE
+                 (kept elsewhere)
+
+This is much safer than putting 5 TB onto a single giant HDD.
+
+A 6 TB WD Red Plus, for example, is a 3.5" SATA CMR HDD designed for NAS/home-office use; WD currently lists 6 TB versions with a 3-year warranty. 
+
+Why I recommend this instead of RAID
+
+Don't spend your limited budget on RAID first.
+
+RAID 1 with two 6 TB drives gives you roughly 6 TB usable, but it is not a backup. If you accidentally delete a folder, malware encrypts it, or the filesystem becomes corrupted, the damage can be replicated to both drives. 
+
+Instead:
+
+Drive	Purpose	Connection
+
+6 TB HDD #1	Main 5 TB data	Always connected
+6 TB HDD #2	Complete backup	Connected only during backup
+8 TB HDD #3	Disaster/archival copy	Normally disconnected + stored elsewhere
+
+
+That gives you three physical copies.
+
+The important trick: keep the backup disconnected
+
+This is particularly useful for your situation.
+
+For example:
+
+Every week/month:
+
+1. Connect HDD #2.
+
+
+2. Synchronize/backup HDD #1 → HDD #2.
+
+
+3. Verify the backup.
+
+
+4. Safely eject HDD #2.
+
+
+5. Disconnect it.
+
+
+6. Store it somewhere physically separate.
+
+
+
+Then periodically update HDD #3.
+
+That means a ransomware infection, accidental deletion, electrical problem, or computer failure can't immediately destroy every copy.
+
+The traditional 3-2-1 strategy recommends three copies, two media/storage locations, and one copy physically separated from the primary location. 
+
+For your 5 TB specifically
+
+I would not buy exactly 5 TB.
+
+A 5 TB collection needs room for filesystem overhead and future growth. I'd choose:
+
+Minimum:
+6 TB + 6 TB + 8 TB
+
+Better:
+8 TB + 8 TB + 8 TB
+
+The second option is much nicer if you expect your collection to grow.
+
+And you don't need a NAS
+
+You could make a very cheap offline storage server from an old desktop:
+
+Old PC
+  │
+  ├── 6/8 TB HDD → Main storage
+  │
+  ├── USB/SATA → Backup HDD
+  │
+  └── Ethernet/Wi-Fi → Your other computers
+
+You can run Linux + Samba and access the storage from Windows/Android over your local network.
+
+No monthly fee.
+
+No cloud.
+
+No expensive NAS hardware.
+
+The old PC itself doesn't need to be powerful. Even an old office PC with 4–8 GB RAM can be perfectly adequate for a basic file server.
+
+One thing I'd spend money on
+
+A UPS.
+
+For Bangladesh, I'd prioritize:
+
+HDDs + UPS > expensive NAS > SSD
+
+The UPS protects the server/HDDs from abrupt power loss and unstable electricity. It doesn't make the data magically safe, but it reduces one important failure risk.
+
+My ideal cheap build for you
+
+┌──────────────────┐
+                │   OLD DESKTOP    │
+                │  4–8 GB RAM      │
+                │  Linux / Windows │
+                └────────┬─────────┘
+                         │
+                    8 TB HDD
+                    MAIN DATA
+                         │
+              ┌──────────┴──────────┐
+              │                     │
+          8 TB HDD              8 TB HDD
+          BACKUP #1             BACKUP #2
+          OFFLINE               OFFSITE
+
+Total raw capacity: 24 TB
+
+But only ~5 TB is your actual dataset; the remaining capacity gives you enormous room for future growth and backup management.
+
+If money is extremely tight, start with two 6 TB HDDs, then add the third drive later.
+
+Most important: don't buy three questionable used HDDs just because they're cheap. For irreplaceable photos/documents, I'd rather have two known-good HDDs + one later than three drives of unknown health.
+
+And for your especially important files, use encryption + checksums/integrity verification as an additional layer. A backup that exists but silently became corrupted isn't a useful backup.
+-
 Yes. If your priority is the cheapest possible server in Bangladesh, and you don't care about size, weight, appearance, or performance, I would not buy a modern NAS or branded server. A used desktop + cheap HDDs is usually much better value.
 
 Current Bangladesh listings support that approach: older PCs can be around ৳5,000–৳14,500, while a new 1TB HDD can start around ৳4,300; new 2TB HDDs are around ৳5,900+ depending on model. 
