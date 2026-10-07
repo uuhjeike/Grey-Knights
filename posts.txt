@@ -1,0 +1,111 @@
+-
+================================================================
+GREY KNIGHTS — posts.txt
+================================================================
+
+HOW TO ADD A POST
+  1. Write your text.
+  2. Paste any links (images, videos, audio, files) on their own line.
+  3. Put a single "-" on its own line to END that post.
+  4. Save the file and refresh the website.
+
+THE ONLY RULE
+  A line containing only "-" ends one post and starts the next.
+
+  Text lines and link lines can be mixed in any order. The website
+  keeps your order. Several image links in a row become one gallery.
+
+OPTIONAL DATE
+  A line written exactly like 2026-10-07 or 2026-10-07 16:30 becomes
+  the post date. Leave it out and no date is shown.
+
+COMMENTS
+  Everything between a slash-star and a star-slash (like this block)
+  is ignored, and so is any line that starts with two slashes.
+
+PLAIN LINKS WORK
+  GitHub links such as
+  https://github.com/uuhjeike/Grey-Knights/blob/main/photo.jpg
+  are converted automatically. No need to change them to raw links.
+
+POSTS APPEAR IN THE ORDER THEY ARE WRITTEN HERE (top to bottom).
+Put your newest post at the top if you want it shown first.
+
+----------------------------------------------------------------
+EXAMPLES (copy any of these, replace the text and links)
+----------------------------------------------------------------
+
+EXAMPLE 1 - TEXT ONLY
+
+Grey Knights stand against the darkness.
+-
+
+EXAMPLE 2 - ONE IMAGE
+
+Battlefield archive.
+https://example.com/image.jpg
+-
+
+EXAMPLE 3 - MULTIPLE IMAGES
+
+The aftermath.
+https://example.com/image1.jpg
+https://example.com/image2.jpg
+https://example.com/image3.jpg
+-
+
+EXAMPLE 4 - YOUTUBE LONG VIDEO
+
+Grey Knights battle documentary.
+https://www.youtube.com/watch?v=VIDEO_ID
+-
+
+EXAMPLE 5 - YOUTUBE SHORT
+
+A short battlefield transmission.
+https://www.youtube.com/shorts/VIDEO_ID
+-
+
+EXAMPLE 6 - DIRECT VIDEO
+
+Armour demonstration.
+https://example.com/video.mp4
+-
+
+EXAMPLE 7 - AUDIO
+
+Transmission.
+https://example.com/audio.mp3
+-
+
+EXAMPLE 8 - FILE
+
+Battle archive.
+https://example.com/archive.pdf
+-
+
+EXAMPLE 9 - MIXED (text, images, video, audio, file, with a date)
+
+2026-10-07 16:30
+
+The warriors enter the cathedral.
+
+https://example.com/image1.jpg
+https://example.com/image2.jpg
+https://www.youtube.com/watch?v=VIDEO_ID
+https://example.com/audio.mp3
+https://example.com/archive.pdf
+-
+
+EXAMPLE 10 - GITHUB FILES AND NORMAL LINKS
+
+Photo from the repository:
+https://github.com/uuhjeike/Grey-Knights/blob/main/photo.jpg
+
+A normal link becomes an "Open link" card:
+https://example.com/article
+-
+
+YOUR POSTS GO BELOW THIS LINE
+================================================================
+*/
