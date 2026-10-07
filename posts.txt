@@ -1,4 +1,71 @@
 -
+Yes. Now I understand exactly what you are building: a post-internet-apocalypse offline knowledge computer—maximum useful knowledge, but deliberately avoiding huge amounts of celebrity/sports/entertainment trivia.
+
+I would not download the entire Wikipedia. NOMAD says full English Wikipedia with images is ~125 GB, while Kiwix offers a much smaller nopic version containing the full articles without images. 
+
+My recommended complete build
+
+Category	Target storage
+
+🌍 Complete detailed world map	~125 GB
+📚 Curated Wikipedia / essential knowledge	~20–40 GB
+🩺 Survival + medical + emergency	~10–20 GB
+🌾 Agriculture + food + water	~5–15 GB
+🔧 Engineering/DIY/repair/electricity	~10–20 GB
+💻 HTML/CSS/JavaScript + programming documentation	~5–15 GB
+🗣️ Multilingual dictionary/translator data	~10–30 GB
+📖 Important books/manuals/PDFs	~10–30 GB
+🤖 Survival/general AI	~10–20 GB
+🤖 Coding AI	~9–20 GB
+🎬 Entertainment videos	~20–50 GB
+🎮 Offline games/software/tools	~10–30 GB
+💻 NOMAD + Linux + applications	~30–50 GB
+🛡️ Free space/reserve	~100–200 GB
+
+
+Total: approximately 400–700 GB
+
+So my exact recommendation for you is:
+
+🟢 1 TB storage
+
+Not because you necessarily need 1 TB on day one, but because 1 TB gives you the room to actually build the “never need the internet again” archive you are describing.
+
+Project NOMAD itself says a 1 TB drive can handle all of Wikipedia with pictures, all of Khan Academy and additional content, and its test installation with selected content and two AI models used under 30 GB. 
+
+Your two-AI idea is good
+
+For the coding AI, a dedicated coding model makes much more sense than wasting storage on another general model. For example, Qwen2.5-Coder 14B is ~9 GB, while its 32B version is ~20 GB. 
+
+I'd therefore target:
+
+AI #1 — Coding: Qwen Coder-class model, ideally 14B if your hardware can run it.
+
+AI #2 — Survival/general: a good general-purpose local model around 7–14B.
+
+The important thing is that the AI doesn't need to contain all your knowledge. NOMAD can use the local library as its reference material; the documentation specifically describes the AI as a tool for finding and summarizing your downloaded knowledge. 
+
+One change I'd make to your plan
+
+For the dictionary/translator, don't try to make one enormous AI translate every language. Use offline language databases/dictionaries + translation models where available. That gives you much better reliability and much less storage.
+
+So your final 1-TB machine would look roughly like:
+
+🌍 World → 🗺️ Maps
+🧠 Knowledge → curated Wikipedia + science
+🏥 Survival → medicine + emergency + agriculture
+🔧 Skills → repair + engineering + electricity
+💻 Coding → HTML/CSS/JS + documentation + coding AI
+🗣️ Languages → dictionaries + translation
+📖 Books → essential manuals/reference books
+🤖 AI → survival/general + coding
+🎬 Entertainment → selected videos/games
+
+1 TB = my recommended capacity.
+2 TB = if you want to stop worrying about storage entirely and continuously add your own material.
+
+And importantly, you don't need 100 TB. The giant Wikipedia numbers you may have heard often refer to revision/history datasets, not the practical offline encyclopedia you actually want.
+-
 If you mean what else you can add to your offline NOMAD system beyond the 2 AIs, world map, science, survival, medicine, agriculture, and entertainment, there is a lot.
 
 Best additions
