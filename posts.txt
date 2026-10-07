@@ -1,4 +1,21 @@
 -
+If you mean the entire world offline map in Project NOMAD, it's currently about 120–126 GB for the full-featured global map. 
+
+So roughly:
+
+🌍 Whole world map: ~125 GB
+
+🇧🇩 Bangladesh only: much smaller
+
+🌏 A few countries/regions: usually a few GB to tens of GB
+
+🗺️ Global low-zoom basemap only: only ~15 MB, but that's not detailed street-level navigation. 
+
+
+NOMAD specifically lets you choose individual countries/regions instead of downloading the ~125 GB global map. 
+
+So if your goal is science + medicine + agriculture + useful knowledge + worldwide navigation, I'd budget around 250–400 GB rather than several terabytes. That gives you the ~125 GB global map plus a large curated knowledge collection and plenty of room.
+-
 Ah, yes — you are talking about a much smaller, curated NOMAD library, not downloading the entire Wikimedia/Wikipedia archive.
 
 There is an important distinction:
