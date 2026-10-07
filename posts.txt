@@ -1,4 +1,7 @@
 -
+use kora 6TB HDD tao 10,000tk
+Amar home server ba home Lab ba home cloud storage banano ar hbe na.
+-
 Ah, ৳5,000–৳6,000 changes the recommendation completely. You don't need to buy a 6 TB drive right now.
 
 For your goal, I would rather buy a smaller, healthy HDD and build the system gradually than buy a suspiciously cheap high-capacity used drive.
