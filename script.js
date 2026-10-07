@@ -616,7 +616,7 @@
     flushImages();
 
     var head = el('header', { class: 'post-head' },
-      el('span', { class: 'brand' }, icon('gk-sigil'), el('span', { class: 'brand-name', text: 'Grey Knights' })),
+      el('span', { class: 'brand' }, icon('gk-sigil'), el('span', { class: 'brand-name', text: 'Grey Knight' })),
       el('span', { class: 'purity', 'aria-hidden': 'true' }, el('i')));
 
     var stamp = null;
@@ -697,7 +697,7 @@
     if (kind === 'empty') {
       state = el('div', { class: 'state' },
         icon('gk-sigil', 'state-sigil'),
-        el('p', { class: 'state-title', text: 'Grey Knights' }),
+        el('p', { class: 'state-title', text: 'Grey Knight' }),
         el('p', { class: 'state-strong', text: 'No records found' }),
         el('p', { class: 'state-text', text: 'Awaiting new transmission.' }));
     } else {
@@ -864,7 +864,7 @@
     $('#shareBtn').addEventListener('click', function () {
       var url = location.href.split('#')[0];
       if (navigator.share) {
-        navigator.share({ title: 'Grey Knights', url: url }).catch(function () { /* cancelled */ });
+        navigator.share({ title: 'Grey Knight', url: url }).catch(function () { /* cancelled */ });
         return;
       }
       copyText(url).then(function (ok) { toast(ok ? 'Profile link copied' : 'Could not copy the link'); });
