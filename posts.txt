@@ -1,4 +1,6 @@
 -
+na charte deri ache.
+-
 Yes. Let me explain exactly how I intended the link system to work, because there is one important distinction between the visible post number and the actual permanent identity.
 
 Example
