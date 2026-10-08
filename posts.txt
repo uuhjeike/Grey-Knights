@@ -1,3 +1,377 @@
+-
+Yes. Let me explain exactly how I intended the link system to work, because there is one important distinction between the visible post number and the actual permanent identity.
+
+Example
+
+Suppose your Post.txt initially has 3 posts:
+
+-
+Oldest post
+-
+
+-
+Second post
+-
+
+-
+Newest post
+-
+
+The website automatically assigns:
+
+Post	Permanent number	Link
+
+Oldest	1	https://uuhjeike.github.io/Grey-Knights/?post=1
+Second	2	https://uuhjeike.github.io/Grey-Knights/?post=2
+Newest	3	https://uuhjeike.github.io/Grey-Knights/?post=3
+
+
+The ?post=3 part is a URL query parameter; JavaScript can read it with URLSearchParams. 
+
+
+---
+
+Then you add a NEW post at the top
+
+Your file becomes:
+
+-
+NEW POST
+-
+
+-
+Newest old post
+-
+
+-
+Second old post
+-
+
+-
+Oldest old post
+-
+
+The website should NOT say:
+
+NEW POST = 1
+Newest old post = 2
+Second old post = 3
+Oldest old post = 4
+
+That would destroy your old links.
+
+Instead:
+
+NEW POST       = 4
+Newest old     = 3
+Second old     = 2
+Oldest old     = 1
+
+So:
+
+?post=1 → Oldest old post
+?post=2 → Second old post
+?post=3 → Newest old post
+?post=4 → NEW POST
+
+That's the behavior you want.
+
+
+---
+
+But there is an important technical problem
+
+If we simply do this:
+
+postNumber = arrayIndex + 1;
+
+then it will NOT work.
+
+Because when you put a new post at the top, every old post's array position changes.
+
+For example:
+
+Before:
+
+index 0 → Post 1
+index 1 → Post 2
+index 2 → Post 3
+
+After adding a post:
+
+index 0 → NEW
+index 1 → Post 1
+index 2 → Post 2
+index 3 → Post 3
+
+Therefore using index + 1 would incorrectly change the links.
+
+We absolutely must not do that.
+
+
+---
+
+How the correct system works
+
+Think of it as two separate things:
+
+1. Display order
+
+Controls where the post appears.
+
+NEW
+Post 3
+Post 2
+Post 1
+
+2. Permanent identity
+
+Controls what the post's link is.
+
+NEW    → 4
+Post 3 → 3
+Post 2 → 2
+Post 1 → 1
+
+These two systems are completely independent.
+
+That's the key.
+
+
+---
+
+When you press COPY LINK
+
+Suppose you're looking at Post 2.
+
+The button doesn't ask:
+
+> "Where is this card currently located?"
+
+
+
+Instead it asks:
+
+> "What is this post's permanent identity?"
+
+
+
+Then it generates:
+
+https://uuhjeike.github.io/Grey-Knights/?post=2
+
+The browser can manipulate/read URLs like this using the standard URL and History APIs. 
+
+
+---
+
+When someone opens the link
+
+Suppose your friend receives:
+
+https://uuhjeike.github.io/Grey-Knights/?post=2
+
+The site loads normally.
+
+Then JavaScript reads:
+
+post = 2
+
+It searches its permanent identity mapping for:
+
+2
+
+It finds the exact post belonging to 2.
+
+Then it:
+
+1. loads that post
+
+
+2. renders it
+
+
+3. scrolls directly to it
+
+
+4. highlights it
+
+
+5. leaves the URL as ?post=2
+
+
+
+So your friend doesn't have to manually find the post.
+
+
+---
+
+And if you add 500 more posts?
+
+Suppose Post 2 was originally:
+
+?post=2
+
+You eventually have:
+
+Post 502
+Post 501
+Post 500
+...
+Post 3
+Post 2
+Post 1
+
+Post 2 is still:
+
+?post=2
+
+It doesn't matter that there are now 502 posts above it.
+
+
+---
+
+The REALLY important part
+
+There is one thing I want to correct from my previous prompt.
+
+You said:
+
+> "I don't want to add any ID number."
+
+
+
+That's completely fine for your normal posting workflow.
+
+But a static GitHub Pages website cannot magically write permanent information back into your GitHub Post.txt file.
+
+So the generator cannot honestly promise:
+
+> "I'll remember a new number forever across every device using only JavaScript and Post.txt."
+
+
+
+localStorage would only remember it in a particular browser/device. It would not give your friend the same mapping.
+
+Therefore, if you want this to be 100% permanent and global, the website needs some persistent identity record somewhere in the GitHub repository.
+
+You don't necessarily have to manually maintain it.
+
+For example:
+
+Post.txt
+identity-map.json
+index.html
+style.css
+script.js
+
+The identity-map.json could internally contain something like:
+
+{
+  "post-signature-A": 1,
+  "post-signature-B": 2,
+  "post-signature-C": 3
+}
+
+You don't have to type those IDs into every post.
+
+The system uses the mapping to remember:
+
+THIS PARTICULAR POST → 1
+THIS PARTICULAR POST → 2
+THIS PARTICULAR POST → 3
+
+That is what makes the old links actually permanent.
+
+
+---
+
+One more important limitation
+
+If you literally only have:
+
+Post.txt
+
+and you manually edit it on GitHub, the website alone cannot permanently assign and commit a new number to GitHub.
+
+The browser can change the URL with pushState() and similar APIs, but that does not modify your GitHub repository. 
+
+So there are two choices:
+
+Option A — simplest
+
+You manually add a hidden ID:
+
+ID: 000004
+
+You said you don't want this.
+
+Option B — automatic
+
+Use a tiny persistent mapping/manifest alongside Post.txt.
+
+This is what I recommend for your project.
+
+You continue writing posts normally:
+
+-
+My new post
+-
+
+-
+Another post
+-
+
+The identity system handles the permanent numbers separately.
+
+
+---
+
+So your final behavior is:
+
+FIRST POST
+↓
+1
+↓
+?post=1
+
+Then:
+
+SECOND POST
+↓
+2
+↓
+?post=2
+
+Then:
+
+THIRD POST
+↓
+3
+↓
+?post=3
+
+Then you add a new post at the top:
+
+FOURTH POST
+↓
+4
+↓
+?post=4
+
+while:
+
+?post=1 → FIRST POST
+?post=2 → SECOND POST
+?post=3 → THIRD POST
+?post=4 → FOURTH POST
+
+Forever.
+
+The feed can be reordered, filtered, virtualized, and infinitely expanded, but the permanent identity remains attached to the same post.
+
+That is the architecture you want.
+-
 to atai The End
 ⌛🔚⚰️🪦🚫👋
 -
