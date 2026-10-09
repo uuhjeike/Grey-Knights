@@ -1,3 +1,4 @@
+-
 SCP-5402 — The Interdimensional Newsboy
 
 🌌 Interdimensional travel: Can travel between different realities.
